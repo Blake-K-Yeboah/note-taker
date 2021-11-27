@@ -1,7 +1,30 @@
+// Components
+import Sidebar from "./components/Sidebar";
+
+// Hooks
+import { useEffect, useState } from "react";
+
 function App() {
+    const [currentNote, setCurrentNote] = useState("");
+    const [notes, setNotes] = useState([]);
+    const [modalShow, setModalShow] = useState(false);
+
+    useEffect(() => {
+        let notesFromStorage = localStorage.getItem("notes");
+
+        if (notesFromStorage) {
+            setCurrentNote(JSON.parse(notesFromStorage)[0].title);
+            setNotes(JSON.parse(notesFromStorage));
+        }
+    }, []);
+
     return (
-        <div className="App">
-            <h1 className="text-blue-500">Hello</h1>
+        <div className="flex flex-row">
+            <Sidebar
+                currentNote={currentNote}
+                notes={notes}
+                setModalShow={setModalShow}
+            />
         </div>
     );
 }
