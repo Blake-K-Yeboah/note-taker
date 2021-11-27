@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar";
 
 // Hooks
 import { useEffect, useState } from "react";
+import CreateNote from "./components/CreateNote";
 
 function App() {
     const [currentNote, setCurrentNote] = useState("");
@@ -25,6 +26,7 @@ function App() {
                 notes={notes}
                 setModalShow={setModalShow}
             />
+            <CreateNote modalShow={modalShow} setModalShow={setModalShow} />
         </div>
     );
 }
