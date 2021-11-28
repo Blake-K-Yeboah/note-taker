@@ -25,7 +25,7 @@ const noteLink = ({
             }}
             className={`${
                 active
-                    ? "text-green-400 cursor-default bg-green-800"
+                    ? "text-blue-50 cursor-default bg-blue-500"
                     : "text-gray-400 cursor-pointer"
             } text-lg pl-5 py-5 relative`}
         >
@@ -33,7 +33,7 @@ const noteLink = ({
 
             {active ? (
                 <FaTimes
-                    className="text-green-200 absolute right-5 hover:text-red-500 cursor-pointer"
+                    className="text-blue-200 absolute right-5 hover:text-red-500 cursor-pointer"
                     style={{ top: "50%", transform: "translateY(-50%)" }}
                     onClick={handleClose}
                 />
