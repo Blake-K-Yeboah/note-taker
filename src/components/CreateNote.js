@@ -48,13 +48,13 @@ const CreateNote = ({ modalShow, setModalShow, setNotes }) => {
             {/* Overlay */}
             <div
                 className={`transition-opacity duration-1000 ease-in-out bg-black w-screen h-screen fixed top-0 left-0 ${
-                    modalShow ? "opacity-25 z-20" : "opacity-0 z-0"
+                    modalShow ? "opacity-50 z-20" : "opacity-0 z-0"
                 }`}
             ></div>
 
             {/* Create Note Modal */}
             <div
-                className={`bg-white absolute h-64 rounded-2xl p-8 transition-opacity duration-1000 ease-in-out ${
+                className={`bg-gray-800 absolute h-64 rounded-2xl p-8 transition-opacity duration-1000 ease-in-out ${
                     modalShow ? "opacity-100 z-30" : "opacity-0 z-0"
                 }`}
                 style={{
@@ -70,12 +70,14 @@ const CreateNote = ({ modalShow, setModalShow, setNotes }) => {
                 >
                     <FaTimes />
                 </button>
-                <h2 className="font-medium text-2xl">Create New Note</h2>
+                <h2 className="font-medium text-2xl text-white">
+                    Create New Note
+                </h2>
                 <form className="mt-6" onSubmit={handleFormSubmit}>
                     <div className="mb-7">
                         <label
                             htmlFor="noteTitle"
-                            className="block text-gray-700 text-sm font-bold mb-2"
+                            className="block text-gray-300 text-sm font-bold mb-2"
                         >
                             Title
                         </label>
@@ -83,8 +85,8 @@ const CreateNote = ({ modalShow, setModalShow, setNotes }) => {
                             id="noteTitle"
                             value={title}
                             onChange={handleInputChange}
-                            className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight outline-none
-                             focus:shadow-lg transition-all duration-300 ease-in-out ${
+                            className={`shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 leading-tight outline-none bg-gray-800
+                             focus:border-blue-500 transition-all duration-300 ease-in-out ${
                                  error ? "border border-red-500" : ""
                              }`}
                             placeholder="Title"
@@ -95,7 +97,7 @@ const CreateNote = ({ modalShow, setModalShow, setNotes }) => {
                     </div>
                     <button
                         type="submit"
-                        className="bg-green-500 hover:bg-green-700 transition-all duration-300 ease-in-out text-white px-4 py-2 rounded-xl"
+                        className="bg-blue-500 hover:bg-blue-700 transition-all duration-300 ease-in-out text-white px-4 py-2 rounded-xl"
                     >
                         Create Note
                     </button>
