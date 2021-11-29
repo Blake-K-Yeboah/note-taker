@@ -11,8 +11,8 @@ const CurrentEditor = ({
     activeNote,
     setActiveNote,
 }) => {
-    const [titleEditable, setTitleEditable] = useState(true);
-    const [title, setTitle] = useState("Class Notes");
+    const [titleEditable, setTitleEditable] = useState(false);
+    const [title, setTitle] = useState("");
     const titleInputEl = useRef(null);
 
     return (
