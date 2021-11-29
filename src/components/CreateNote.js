@@ -85,7 +85,7 @@ const CreateNote = ({ modalShow, setModalShow, setNotes }) => {
                             id="noteTitle"
                             value={title}
                             onChange={handleInputChange}
-                            className={`shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 leading-tight outline-none bg-gray-800
+                            className={`shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-300 leading-tight outline-none bg-gray-800
                              focus:border-blue-500 transition-all duration-300 ease-in-out ${
                                  error ? "border border-red-500" : ""
                              }`}
